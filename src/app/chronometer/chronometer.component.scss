@@ -1,0 +1,25 @@
+.pie {
+    /* Basic layout */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+
+    /* A little styling */
+    border: .5em solid #fff;
+    box-shadow: 0 .075em .2em .05em rgba(0, 0, 0, .25);
+
+    /* fixes a minor clipping issue in Chrome */
+    background-origin: border-box;
+    background-image: conic-gradient( #fff calc(3.6deg * var(--completed-segment, 0)), #abc 0 );
+    background-origin: border-box;
+
+
+
+
+    .timer {
+        font-size: 24pt;
+    }
+}
