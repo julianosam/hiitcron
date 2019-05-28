@@ -1,25 +1,54 @@
-.pie {
-    /* Basic layout */
+.wrapper {
+
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 15rem;
-    height: 15rem;
-    border-radius: 50%;
 
-    /* A little styling */
-    border: .5em solid #fff;
-    box-shadow: 0 .075em .2em .05em rgba(0, 0, 0, .25);
-
-    /* fixes a minor clipping issue in Chrome */
-    background-origin: border-box;
-    background-image: conic-gradient( #fff calc(3.6deg * var(--completed-segment, 0)), #abc 0 );
-    background-origin: border-box;
-
+    .pie {
+        /* Basic layout */
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 14rem;
+        height: 14rem;
+        border-radius: 50%;
+        border: .2rem solid #fff;
 
 
+        /* fixes a minor clipping issue in Chrome */
+        background-origin: border-box;
+        background-image: conic-gradient(#fff calc(3.6deg * var(--completed-segment, 0)), #bca 0);
 
-    .timer {
-        font-size: 24pt;
+
+
+
+        .timer {
+            font-size: 24pt;
+        }
+    }
+
+    .sections {
+        width: 18rem;
+        height: 18rem;
+        border-radius: 50%;
+
+        /* A little styling */
+
+        // box-shadow: 0 .075em .2em .05em rgba(0, 0, 0, .25);
+
+        /* fixes a minor clipping issue in Chrome */
+        background-origin: border-box;
+
+        &.highlight {
+            position: absolute;
+            z-index: -1;
+            background-image: conic-gradient(
+                #fff 0% calc(1% * var(--highlight-start, 0)),
+                var(--highlight-color, #fff) calc(1% * var(--highlight-start, 0)) calc(1% * var(--highlight-end, 0)),
+                #fff 0
+            );
+        }
     }
 }
